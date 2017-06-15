@@ -23,6 +23,6 @@ export class Article{
             return link.split('/')[0];
         }catch(err){
             return null;
-        }
+        }//点击链接重定向域名
     }
 }
