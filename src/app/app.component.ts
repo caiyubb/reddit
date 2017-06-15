@@ -24,4 +24,8 @@ export class AppComponent {
     link.value = '';//清除input的值
     return false;
   }
+
+  sortedArticles(): Article[]{
+    return this.articles.sort((a:Article,b:Article)=> b.votes - a.votes);
+  }
 }
