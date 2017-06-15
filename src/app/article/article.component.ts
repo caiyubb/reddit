@@ -1,0 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.css'],
+  host: {
+    class:'row' //在宿主元素，也就是app-article标签上设置class属性，使其具有row类
+  }
+})
+export class ArticleComponent implements OnInit {
+  votes: number;
+  title: string;
+  link: string;
+
+  constructor() {
+    this.title = 'Angular 2';
+    this.link = 'http://angular.io';
+    this.votes = 10;
+   }
+  voteUp():boolean {
+    this.votes += 1;
+    return false;
+  }
+  voteDown():boolean {
+    this.votes -= 1;
+    return false;
+  }
+
+  ngOnInit() {
+  }
+
+}
