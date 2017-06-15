@@ -23,6 +23,6 @@ export class Article{
             return link.split('/')[0];
         }catch(err){
             return null;
-        }//点击链接重定向域名
+        }//显示网址，若网址格式不正确显示空
     }
 }
